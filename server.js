@@ -18,7 +18,7 @@ app.set('view engine', 'ejs')
 // mount routes
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello Express</h1>')
+  res.redirect('/home')
 })
 
 app.get('/home', (req, res) => {
