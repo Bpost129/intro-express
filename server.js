@@ -1,6 +1,7 @@
 // import modules
 
 import express from 'express'
+import { todos } from './data/todo-data.js'
 
 // create Express app
 
@@ -22,6 +23,12 @@ app.get('/', (req, res) => {
 
 app.get('/home', (req, res) => {
   res.render('home')
+})
+
+app.get('/todos', (req, res) => {
+  res.render('todos/index', {
+    todos: todos
+  })
 })
 
 
